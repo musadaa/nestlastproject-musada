@@ -1,0 +1,9 @@
+{
+  "name": "learnapi-musada",
+  "version": "1.0.0",
+  "description": "api automate mocha",
+  "main": "index.js",
+  "repository": "https://github.com/musadaa/learnapi-musada.git",
+  "author": "musada",
+  "license": "MIT"
+}
