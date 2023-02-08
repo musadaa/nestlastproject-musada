@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 2,
     "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-02-08T08:33:07.659Z",
-    "end": "2023-02-08T08:33:08.643Z",
-    "duration": 984,
-    "testsRegistered": 1,
+    "failures": 2,
+    "start": "2023-02-08T14:28:53.969Z",
+    "end": "2023-02-08T14:28:55.887Z",
+    "duration": 1918,
+    "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
@@ -18,41 +18,63 @@
   },
   "results": [
     {
-      "uuid": "639eb4f4-07e3-4bda-a0cc-69022d89ee69",
+      "uuid": "c36859ea-308d-4c60-8563-9c3a5faba7af",
       "title": "",
-      "fullFile": "/Users/musadarahmah/learn/learnapi-musada/test/scenario/register.test.js",
-      "file": "/test/scenario/register.test.js",
+      "fullFile": "/Users/musadarahmah/learn/nestlastproject-musada/test/scenario/createbook.test.js",
+      "file": "/test/scenario/createbook.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "ee349f50-c04c-4b6c-a5c5-809b8dcd264a",
-          "title": "Register",
-          "fullFile": "/Users/musadarahmah/learn/learnapi-musada/test/scenario/register.test.js",
-          "file": "/test/scenario/register.test.js",
+          "uuid": "6d4b273f-a817-468a-8e10-477b165394c4",
+          "title": "createbook",
+          "fullFile": "/Users/musadarahmah/learn/nestlastproject-musada/test/scenario/createbook.test.js",
+          "file": "/test/scenario/createbook.test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Should successfull register when insert valid data",
-              "fullTitle": "Register Should successfull register when insert valid data",
+              "title": "Successfull create booking",
+              "fullTitle": "createbook Successfull create booking",
               "timedOut": false,
-              "duration": 981,
+              "duration": 1129,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const response = await reqresApi.register(data.INVALID_REGISTER);\n assert.equal(response.status, 200)",
+              "code": "console.log(\"the data is\".VALID_BOOKCREATE)\n const response = await bookerApi.createbook(data.VALID_BOOKCREATE);\n assert.equal(response.status, 200)",
               "err": {
-                "message": "AssertionError: expected 400 to equal 200",
-                "estack": "AssertionError: expected 400 to equal 200\n    at Context.<anonymous> (file:///Users/musadarahmah/learn/learnapi-musada/test/scenario/register.test.js:12:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-                "diff": "- 400\n+ 200\n"
+                "message": "AssertionError: expected 404 to equal 200",
+                "estack": "AssertionError: expected 404 to equal 200\n    at Context.<anonymous> (file:///Users/musadarahmah/learn/nestlastproject-musada/test/scenario/createbook.test.js:10:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 404\n+ 200\n"
               },
-              "uuid": "eed1cd00-480e-470f-b5e2-fecb7f2e2834",
-              "parentUUID": "ee349f50-c04c-4b6c-a5c5-809b8dcd264a",
+              "uuid": "101ecd31-8836-4101-b7a3-875d6e9ed5a0",
+              "parentUUID": "6d4b273f-a817-468a-8e10-477b165394c4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Name must be string",
+              "fullTitle": "createbook Name must be string",
+              "timedOut": false,
+              "duration": 782,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await bookerApi.createbook(data.VALID_BOOKCREATE);\n assert.equal(response.status, 422)",
+              "err": {
+                "message": "AssertionError: expected 404 to equal 422",
+                "estack": "AssertionError: expected 404 to equal 422\n    at Context.<anonymous> (file:///Users/musadarahmah/learn/nestlastproject-musada/test/scenario/createbook.test.js:17:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 404\n+ 422\n"
+              },
+              "uuid": "a848d68e-7ac2-44b0-9970-f8193db5e036",
+              "parentUUID": "6d4b273f-a817-468a-8e10-477b165394c4",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "eed1cd00-480e-470f-b5e2-fecb7f2e2834"
+            "101ecd31-8836-4101-b7a3-875d6e9ed5a0",
+            "a848d68e-7ac2-44b0-9970-f8193db5e036"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 981,
+          "duration": 1911,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

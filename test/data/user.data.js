@@ -1,14 +1,19 @@
-export const VALID_REGISTER = {
-        "email": "eva.holt@reqres.in",
-        "password": "pistol"
-        }
+export const VALID_BOOKCREATE = {
+        "firstname" : "Musada",
+        "lastname" : "TAA",
+        "totalprice" : 350000,
+        "depositpaid" : true,
+        "bookingdates" : {
+                "checkin" : "2023-01-01",
+                "checkout" : "2023-01-02"
+        },
+        "additionalneeds" : "Breakfast"   
+};
 
-export const INVALID_REGISTER = {
-        "email": "eve.holt@reqres.in"
-        }
-
-export const REGISTER = "eve.holt@reqres.in"
+export const INVALID_BOOKCREATE = {
+        
+}
          
         
-export default {INVALID_REGISTER, VALID_REGISTER, REGISTER};
+export default {VALID_BOOKCREATE};
 
