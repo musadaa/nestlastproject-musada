@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-02-08T08:33:07.659Z",
+    "end": "2023-02-08T08:33:08.643Z",
+    "duration": 984,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "639eb4f4-07e3-4bda-a0cc-69022d89ee69",
+      "title": "",
+      "fullFile": "/Users/musadarahmah/learn/learnapi-musada/test/scenario/register.test.js",
+      "file": "/test/scenario/register.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ee349f50-c04c-4b6c-a5c5-809b8dcd264a",
+          "title": "Register",
+          "fullFile": "/Users/musadarahmah/learn/learnapi-musada/test/scenario/register.test.js",
+          "file": "/test/scenario/register.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfull register when insert valid data",
+              "fullTitle": "Register Should successfull register when insert valid data",
+              "timedOut": false,
+              "duration": 981,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.register(data.INVALID_REGISTER);\n assert.equal(response.status, 200)",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.<anonymous> (file:///Users/musadarahmah/learn/learnapi-musada/test/scenario/register.test.js:12:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "eed1cd00-480e-470f-b5e2-fecb7f2e2834",
+              "parentUUID": "ee349f50-c04c-4b6c-a5c5-809b8dcd264a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "eed1cd00-480e-470f-b5e2-fecb7f2e2834"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 981,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
