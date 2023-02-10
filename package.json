@@ -19,9 +19,8 @@
     "postinstall": "link-module-alias",
     "preinstall": "command -v link-module-alias && link-module-alias clean || true"
   },
-
   "_moduleAliases": {
-    "$root" : "test",
-    "helper" : "test/helper"  
+    "$root": "test",
+    "helper": "test/helper"
   }
 }
