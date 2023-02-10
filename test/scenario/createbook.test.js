@@ -11,7 +11,31 @@ describe('createbook', function(){
 
     it('Name must be string', async() => {
        
-        const response = await bookerApi.createBook(data.INVALID_BOOKCREATE);
+        const response = await bookerApi.createBook(data.INVALIDSTRING_BOOKCREATE);
+
+        assert.equal(response.status, 500)
+
+    });
+
+    it('Integer must be number', async() => {
+       
+        const response = await bookerApi.createBook(data.INVALIDNUMBER_BOOKCREATE);
+
+        assert.equal(response.status, 500)
+
+    });
+
+    it('Date format must be true', async() => {
+       
+        const response = await bookerApi.createBook(data.INVALIDDATE_BOOKCREATE);
+
+        assert.equal(response.status, 500)
+
+    });
+
+    it('Boolean must be true or false not "true" or "false" ', async() => {
+       
+        const response = await bookerApi.createBook(data.INVALIDBOOLEAN_BOOKCREATE);
 
         assert.equal(response.status, 500)
 

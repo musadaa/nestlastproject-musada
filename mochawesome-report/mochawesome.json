@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 3,
-    "passes": 3,
+    "tests": 6,
+    "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-02-10T16:18:13.881Z",
-    "end": "2023-02-10T16:18:17.738Z",
-    "duration": 3857,
-    "testsRegistered": 3,
-    "passPercent": 100,
+    "failures": 4,
+    "start": "2023-02-10T17:12:39.866Z",
+    "end": "2023-02-10T17:12:47.132Z",
+    "duration": 7266,
+    "testsRegistered": 6,
+    "passPercent": 33.33333333333333,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "99d17c1b-d1d9-4054-be84-a037e811beba",
+      "uuid": "27fc72ac-2118-4fcb-a0e9-6ce1a89cf99b",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "627bc849-1d09-4e3a-b55c-d8c82f1fc979",
+          "uuid": "d6694506-d4f5-4e1c-8b9c-37bc9af2d572",
           "title": "createbook",
           "fullFile": "/Users/musadarahmah/learn/nestlastproject-musada/test/scenario/createbook.test.js",
           "file": "/test/scenario/createbook.test.js",
@@ -38,7 +38,7 @@
               "title": "Successfull create booking",
               "fullTitle": "createbook Successfull create booking",
               "timedOut": false,
-              "duration": 1505,
+              "duration": 1378,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const response = await bookerApi.createBook(data.VALID_BOOKCREATE);\nassert.equal(response.status, 200)",
               "err": {},
-              "uuid": "92032877-6eb7-4192-8896-727fc6aff686",
-              "parentUUID": "627bc849-1d09-4e3a-b55c-d8c82f1fc979",
+              "uuid": "03e13f53-dcbb-4e3f-a637-e1f471168394",
+              "parentUUID": "d6694506-d4f5-4e1c-8b9c-37bc9af2d572",
               "isHook": false,
               "skipped": false
             },
@@ -56,36 +56,106 @@
               "title": "Name must be string",
               "fullTitle": "createbook Name must be string",
               "timedOut": false,
-              "duration": 770,
+              "duration": 1069,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await bookerApi.createBook(data.INVALID_BOOKCREATE);\n assert.equal(response.status, 500)",
+              "code": "const response = await bookerApi.createBook(data.INVALIDSTRING_BOOKCREATE);\n assert.equal(response.status, 500)",
               "err": {},
-              "uuid": "6714fdda-989f-4eb2-a4f0-c43b983a783e",
-              "parentUUID": "627bc849-1d09-4e3a-b55c-d8c82f1fc979",
+              "uuid": "7d83b2eb-2288-4dc0-be75-a0913a4eec11",
+              "parentUUID": "d6694506-d4f5-4e1c-8b9c-37bc9af2d572",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Integer must be number",
+              "fullTitle": "createbook Integer must be number",
+              "timedOut": false,
+              "duration": 1135,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await bookerApi.createBook(data.INVALIDNUMBER_BOOKCREATE);\n assert.equal(response.status, 500)",
+              "err": {
+                "message": "AssertionError: expected 200 to equal 500",
+                "estack": "AssertionError: expected 200 to equal 500\n    at Context.<anonymous> (file:///Users/musadarahmah/learn/nestlastproject-musada/test/scenario/createbook.test.js:24:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 200\n+ 500\n"
+              },
+              "uuid": "3ae8f69a-22e4-4efd-9b53-39c58985b545",
+              "parentUUID": "d6694506-d4f5-4e1c-8b9c-37bc9af2d572",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Date format must be true",
+              "fullTitle": "createbook Date format must be true",
+              "timedOut": false,
+              "duration": 859,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await bookerApi.createBook(data.INVALIDDATE_BOOKCREATE);\n assert.equal(response.status, 500)",
+              "err": {
+                "message": "AssertionError: expected 200 to equal 500",
+                "estack": "AssertionError: expected 200 to equal 500\n    at Context.<anonymous> (file:///Users/musadarahmah/learn/nestlastproject-musada/test/scenario/createbook.test.js:32:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 200\n+ 500\n"
+              },
+              "uuid": "f2bf13e2-9d7f-44d8-907c-e03e87f92eed",
+              "parentUUID": "d6694506-d4f5-4e1c-8b9c-37bc9af2d572",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Boolean must be true or false not \"true\" or \"false\" ",
+              "fullTitle": "createbook Boolean must be true or false not \"true\" or \"false\" ",
+              "timedOut": false,
+              "duration": 807,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await bookerApi.createBook(data.INVALIDBOOLEAN_BOOKCREATE);\n assert.equal(response.status, 500)",
+              "err": {
+                "message": "AssertionError: expected 200 to equal 500",
+                "estack": "AssertionError: expected 200 to equal 500\n    at Context.<anonymous> (file:///Users/musadarahmah/learn/nestlastproject-musada/test/scenario/createbook.test.js:40:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 200\n+ 500\n"
+              },
+              "uuid": "c8aa4bc4-4283-4635-84f6-bf6386ec8eee",
+              "parentUUID": "d6694506-d4f5-4e1c-8b9c-37bc9af2d572",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "92032877-6eb7-4192-8896-727fc6aff686",
-            "6714fdda-989f-4eb2-a4f0-c43b983a783e"
+            "03e13f53-dcbb-4e3f-a637-e1f471168394",
+            "7d83b2eb-2288-4dc0-be75-a0913a4eec11"
           ],
-          "failures": [],
+          "failures": [
+            "3ae8f69a-22e4-4efd-9b53-39c58985b545",
+            "f2bf13e2-9d7f-44d8-907c-e03e87f92eed",
+            "c8aa4bc4-4283-4635-84f6-bf6386ec8eee"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 2275,
+          "duration": 5248,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "b749bd3b-7a5e-4195-af34-0aa09e542798",
+          "uuid": "04d507d4-96c7-4510-afbf-5d359e5650ff",
           "title": "getlistbook",
           "fullFile": "/Users/musadarahmah/learn/nestlastproject-musada/test/scenario/getlistbook.test.js",
           "file": "/test/scenario/getlistbook.test.js",
@@ -95,30 +165,34 @@
             {
               "title": "Successfull get list booking",
               "fullTitle": "getlistbook Successfull get list booking",
-              "timedOut": false,
-              "duration": 1576,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "timedOut": true,
+              "duration": 2003,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "const response = await bookerApi.getListBook();\nassert.equal(response.status, 200)",
-              "err": {},
-              "uuid": "820fba15-1442-4226-86c0-de503b73870e",
-              "parentUUID": "b749bd3b-7a5e-4195-af34-0aa09e542798",
+              "err": {
+                "message": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/Users/musadarahmah/learn/nestlastproject-musada/test/scenario/getlistbook.test.js)",
+                "estack": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/Users/musadarahmah/learn/nestlastproject-musada/test/scenario/getlistbook.test.js)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)",
+                "diff": null
+              },
+              "uuid": "fcb1275c-586a-441c-9d39-c686da02fa2c",
+              "parentUUID": "04d507d4-96c7-4510-afbf-5d359e5650ff",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "820fba15-1442-4226-86c0-de503b73870e"
+          "passes": [],
+          "failures": [
+            "fcb1275c-586a-441c-9d39-c686da02fa2c"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1576,
+          "duration": 2003,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
