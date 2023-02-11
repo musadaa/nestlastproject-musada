@@ -59,7 +59,15 @@ export const INVALIDBOOLEAN_BOOKCREATE = {
 };
 
 export const VALID_DETAIL_BOOK = {
-        
+        "id" : 1
+};
+
+export const INVALID_DETAIL_IDSTRING = {
+        "id" : "a"
+}
+
+export const INVALID_DETAIL_IDBOOLEAN = {
+        "id" : true
 }
 
 export default {VALID_BOOKCREATE, INVALIDSTRING_BOOKCREATE, INVALIDNUMBER_BOOKCREATE, INVALIDDATE_BOOKCREATE, INVALIDBOOLEAN_BOOKCREATE};
