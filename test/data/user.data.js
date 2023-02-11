@@ -25,7 +25,7 @@ export const INVALIDSTRING_BOOKCREATE = {
 export const INVALIDNUMBER_BOOKCREATE = {
         "firstname" : "Musada",
         "lastname" : "T",
-        "totalprice" : tiga puluh lima ribu,
+        "totalprice" : "tiga puluh lima ribu",
         "depositpaid" : true,
         "bookingdates" : {
                 "checkin" : "2023-01-01",
@@ -50,7 +50,7 @@ export const INVALIDBOOLEAN_BOOKCREATE = {
         "firstname" : "Musada",
         "lastname" : "T",
         "totalprice" : 35000,
-        "depositpaid" : 'true',
+        "depositpaid" : "true",
         "bookingdates" : {
                 "checkin" : "2023-13-01",
                 "checkout" : "2023-01-25"
@@ -58,6 +58,9 @@ export const INVALIDBOOLEAN_BOOKCREATE = {
         "additionalneeds" : "Breakfast"   
 };
 
+export const VALID_DETAIL_BOOK = {
+        
+}
 
 export default {VALID_BOOKCREATE, INVALIDSTRING_BOOKCREATE, INVALIDNUMBER_BOOKCREATE, INVALIDDATE_BOOKCREATE, INVALIDBOOLEAN_BOOKCREATE};
 

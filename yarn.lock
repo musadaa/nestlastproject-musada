@@ -393,6 +393,11 @@ inherits@2:
   resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
+is-any-type@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/is-any-type/-/is-any-type-0.0.4.tgz#d0c507629e44dcd90c12ea35d1fe46fd834d385d"
+  integrity sha512-0Ank8Lc9bb8fkdMm8Rt7kipdXTfYxUu1txVx4gTdymsbsFRnYW9TgJ0HmVSCEdCTlEWp8QK1N2RQlsi34ypoPw==
+
 is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/is-binary-path/-/is-binary-path-2.1.0.tgz"
