@@ -5,6 +5,7 @@ dotenv.config();
 
 const BaseAPI = axios.create({
     baseURL : process.env.BASE_URL,
+    baseAUTH : process.env.AUTH_TOKEN,
     headers :{
         "content-type" : "application/json",
         "accept" : "*/*"
@@ -14,7 +15,6 @@ const BaseAPI = axios.create({
     }
 });
 
-
-
+axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 export default BaseAPI

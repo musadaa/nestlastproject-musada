@@ -59,7 +59,7 @@ export const INVALIDBOOLEAN_BOOKCREATE = {
 };
 
 export const VALID_DETAIL_BOOK = {
-        "id" : 1
+        "id" : 2
 };
 
 export const INVALID_DETAIL_IDSTRING = {
@@ -68,6 +68,20 @@ export const INVALID_DETAIL_IDSTRING = {
 
 export const INVALID_DETAIL_IDBOOLEAN = {
         "id" : true
+}
+
+export const VALID_UPDATE = {
+        "id" : 1,
+        "firstname" : "Teguh",
+        "lastname" : "Andi",
+        "totalprice" : 350000,
+        "depositpaid" : true,
+        "bookingdates" : {
+                "checkin" : "2023-01-01",
+                "checkout" : "2023-01-02"
+        },
+        "additionalneeds" : "Breakfast"  
+
 }
 
 export default {VALID_BOOKCREATE, INVALIDSTRING_BOOKCREATE, INVALIDNUMBER_BOOKCREATE, INVALIDDATE_BOOKCREATE, INVALIDBOOLEAN_BOOKCREATE};

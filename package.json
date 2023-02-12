@@ -25,5 +25,8 @@
   "_moduleAliases": {
     "$root": "test",
     "helper": "test/helper"
+  },
+  "devDependencies": {
+    "cypress": "^12.5.1"
   }
 }
