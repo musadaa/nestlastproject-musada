@@ -84,5 +84,33 @@ export const VALID_UPDATE = {
 
 }
 
+export const INVALID_UPDATE_NOSTRING = {
+        "id" : 1,
+        "firstname" : "",
+        "lastname" : "",
+        "totalprice" : 350000,
+        "depositpaid" : true,
+        "bookingdates" : {
+                "checkin" : "2023-01-01",
+                "checkout" : "2023-01-02"
+        },
+        "additionalneeds" : "Breakfast"  
+
+}
+
+export const INVALID_UPDATE_NONUMBER = {
+        "id" : 1,
+        "firstname" : "Teguh",
+        "lastname" : "Andi",
+        "totalprice" : "",
+        "depositpaid" : true,
+        "bookingdates" : {
+                "checkin" : "2023-01-01",
+                "checkout" : "2023-01-02"
+        },
+        "additionalneeds" : "Breakfast"  
+
+}
+
 export default {VALID_BOOKCREATE, INVALIDSTRING_BOOKCREATE, INVALIDNUMBER_BOOKCREATE, INVALIDDATE_BOOKCREATE, INVALIDBOOLEAN_BOOKCREATE};
 
