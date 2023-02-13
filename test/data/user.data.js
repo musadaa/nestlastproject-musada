@@ -71,7 +71,7 @@ export const INVALID_DETAIL_IDBOOLEAN = {
 }
 
 export const VALID_UPDATE = {
-        "id" : 1,
+        
         "firstname" : "Teguh",
         "lastname" : "Andi",
         "totalprice" : 350000,

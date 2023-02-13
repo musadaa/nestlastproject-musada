@@ -18,7 +18,7 @@ describe('updateBook', function(){
         assert.equal(response.status, 400)
     }),
 
-    it('Failed update booking data input firstname '+data.INVALID_UPDATE_NONUMBER.id, async() => {
+    it('Failed update booking data input number '+data.INVALID_UPDATE_NONUMBER.id, async() => {
         let param = data.INVALID_UPDATE_NONUMBER.id;
         const response = await bookerApi.updateBook(param, data.INVALID_UPDATE_NONUMBER);
 
